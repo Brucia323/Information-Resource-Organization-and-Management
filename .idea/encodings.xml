@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/social-pension/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/social-pension/src/main/resources/static/jgyl_02个人基本信息表.CSV" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/social-pension/src/main/resources/static/jgyl_06待遇支付明细表.CSV" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/social-pension/src/main/resources/static/mzhh_殡仪馆火化数据_202012.CSV" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/social-pension/src/main/resources/static/zgyl_02个人基本信息表.CSV" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
