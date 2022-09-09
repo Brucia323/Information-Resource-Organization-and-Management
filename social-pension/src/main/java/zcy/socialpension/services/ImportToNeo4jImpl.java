@@ -15,6 +15,8 @@ import zcy.socialpension.repositoris.EmployeePersonRepository;
 import zcy.socialpension.repositoris.TreatmentPaymentDetailRepository;
 
 import javax.annotation.Resource;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 /**
@@ -76,12 +78,12 @@ public class ImportToNeo4jImpl implements ImportToNeo4j {
             return;
         }
         Set<TreatmentPaymentDetail> treatmentPaymentDetailSet = new HashSet<>(treatmentPaymentDetailList);
-//        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMM");
-//        treatmentPaymentDetailList=new ArrayList<>();
-//        for (TreatmentPaymentDetail treatmentPaymentDetail : treatmentPaymentDetailSet) {
-//            treatmentPaymentDetail.setTreatmentDate(String.valueOf(LocalDate.parse(treatmentPaymentDetail.getTreatmentDate(), dateTimeFormatter)));
-//            treatmentPaymentDetailList.add(treatmentPaymentDetail);
-//        }
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd");
+        treatmentPaymentDetailList = new ArrayList<>();
+        for (TreatmentPaymentDetail treatmentPaymentDetail : treatmentPaymentDetailSet) {
+            treatmentPaymentDetail.setTreatmentDate(String.valueOf(LocalDate.parse(treatmentPaymentDetail.getTreatmentDate() + "01", dateTimeFormatter)));
+            treatmentPaymentDetailList.add(treatmentPaymentDetail);
+        }
         treatmentPaymentDetailRepository.saveAll(treatmentPaymentDetailSet);
     }
 
