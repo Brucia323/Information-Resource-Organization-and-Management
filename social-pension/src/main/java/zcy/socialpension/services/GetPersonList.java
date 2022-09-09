@@ -1,7 +1,5 @@
 package zcy.socialpension.services;
 
-import zcy.socialpension.models.Person;
-
 import java.util.Map;
 
 /**
@@ -14,5 +12,5 @@ public interface GetPersonList {
      *
      * @return 人员列表
      */
-    Map<Person, Double> getReceiveAfterDeath();
+    Map<String, Double> getReceiveAfterDeath();
 }
