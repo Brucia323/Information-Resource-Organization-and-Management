@@ -6,6 +6,7 @@ import zcy.socialpension.services.GetPersonList;
 import zcy.socialpension.services.ImportToNeo4j;
 
 import javax.annotation.Resource;
+import java.util.Map;
 
 @SpringBootTest
 class SocialPensionApplicationTests {
@@ -16,7 +17,8 @@ class SocialPensionApplicationTests {
 
     @Test
     void contextLoads() {
-        System.out.println(getPersonList.getReceiveAfterDeath());
+        Map<String, Double> personDoubleMap = getPersonList.getReceiveAfterDeath();
+        personDoubleMap.forEach((person, aDouble) -> System.out.println(person + " " + aDouble));
     }
 
     @Test
